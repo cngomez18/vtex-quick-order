@@ -11,7 +11,6 @@ const QuickOrder = () => {
     'quick-order--container',
     'quick-order--title',
     'quick-order--form',
-    'quick-order--label',
     'quick-order--input',
     'quick-order--btn',
     'quick-order--notfound',
@@ -32,7 +31,7 @@ const QuickOrder = () => {
   const searchProduct = (event: any) => {
     event.preventDefault()
     if (!inputText) {
-      setNotFoundProduct('No ha ingresado NADA')
+      setNotFoundProduct('No ha ingresado nada')
     } else {
       setSearch(inputText)
       getProductBySku()
@@ -71,27 +70,23 @@ const QuickOrder = () => {
     if (product) {
       updateAddToCart(product?.product?.productId)
     } else {
-      setNotFoundProduct('NO existe el sku ingresado')
+      setNotFoundProduct('No existe el SKU ingresado')
     }
   }, [search, product])
 
   return (
     <>
       <div className={`${handles['quick-order--container']}`}>
-        <div className={`${handles['quick-order--title']}`}>
-          Compra super super rápida
-        </div>
+        <div className={`${handles['quick-order--title']}`}>Compra rápida</div>
         <form
           onSubmit={searchProduct}
           className={`${handles['quick-order--form']}`}
         >
           <div>
-            <label htmlFor="sku" className={`${handles['quick-order--label']}`}>
-              Ingrese su SKU
-            </label>
             <input
               id="sku"
               type="text"
+              placeholder="Ingrese su SKU"
               onChange={handleChange}
               className={`${handles['quick-order--input']}`}
             />
