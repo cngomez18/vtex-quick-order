@@ -1,13 +1,7 @@
-/*
-.quick-order--container
-.quick-order--title
-.quick-order--form
-.quick-order--label
-.quick-order--input
-.quick-order--btn
-.quick-order--notfound
-*/
 
-.quick-order--container{
-  background-color: antiquewhite;
+.quick-order--container {
+  display       : flex;
+  flex-direction: column;
+  flex-wrap     : nowrap;
+  align-items   : center;
 }
