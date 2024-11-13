@@ -13,11 +13,6 @@
     "referenceLocale": "en",
     "localeDirectory": "messages"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
       "eslint --fix",
@@ -41,5 +36,6 @@
     "prettier": "^2.2.0",
     "typescript": "^3.9.6",
     "@vtex/danger": "^0.2.7"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
